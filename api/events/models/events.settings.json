@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "Events"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "EventStart": {
+      "type": "datetime",
+      "required": true
+    },
+    "EventEnd": {
+      "type": "datetime"
+    },
+    "Location": {
+      "type": "json"
+    },
+    "Groups": {
+      "collection": "groups",
+      "via": "Events",
+      "dominant": true
+    },
+    "Posts": {
+      "via": "Event",
+      "collection": "posts"
+    }
+  }
+}

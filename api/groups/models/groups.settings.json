@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "groups",
+  "info": {
+    "name": "Groups",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Acronym": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Page": {
+      "type": "dynamiczone",
+      "components": [
+        "content.heading",
+        "content.text-block",
+        "content.image"
+      ]
+    },
+    "Members": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "Groups",
+      "dominant": true
+    },
+    "Children": {
+      "collection": "groups",
+      "via": "Parents",
+      "dominant": true
+    },
+    "Parents": {
+      "collection": "groups",
+      "via": "Children"
+    },
+    "Tags": {
+      "via": "Groups",
+      "collection": "tags"
+    },
+    "Events": {
+      "via": "Groups",
+      "collection": "events"
+    },
+    "Posts": {
+      "via": "Group",
+      "collection": "posts"
+    }
+  }
+}

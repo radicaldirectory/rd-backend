@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_content_text_blocks",
+  "info": {
+    "name": "TextBlock",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "TextBlock": {
+      "type": "text"
+    }
+  }
+}

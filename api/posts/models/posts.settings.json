@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "Posts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "PostContent": {
+      "type": "text"
+    },
+    "Event": {
+      "model": "events",
+      "via": "Posts"
+    },
+    "Group": {
+      "model": "groups",
+      "via": "Posts"
+    },
+    "User": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "Posts"
+    }
+  }
+}
