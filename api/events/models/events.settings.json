@@ -27,13 +27,18 @@
       "type": "json"
     },
     "Groups": {
-      "collection": "groups",
       "via": "Events",
+      "collection": "groups",
       "dominant": true
     },
     "Posts": {
       "via": "Event",
       "collection": "posts"
+    },
+    "UsersFollowing": {
+      "via": "EventsFollowing",
+      "plugin": "users-permissions",
+      "collection": "user"
     }
   }
 }

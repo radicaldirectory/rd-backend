@@ -18,13 +18,13 @@
       "via": "Posts"
     },
     "Group": {
-      "model": "groups",
-      "via": "Posts"
+      "via": "Posts",
+      "model": "groups"
     },
     "User": {
+      "via": "PostsAuthored",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "Posts"
+      "model": "user"
     }
   }
 }

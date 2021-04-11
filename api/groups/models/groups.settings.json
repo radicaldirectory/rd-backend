@@ -20,20 +20,6 @@
     "Description": {
       "type": "text"
     },
-    "Page": {
-      "type": "dynamiczone",
-      "components": [
-        "content.heading",
-        "content.text-block",
-        "content.image"
-      ]
-    },
-    "Members": {
-      "plugin": "users-permissions",
-      "collection": "user",
-      "via": "Groups",
-      "dominant": true
-    },
     "Children": {
       "collection": "groups",
       "via": "Parents",
@@ -44,16 +30,27 @@
       "via": "Children"
     },
     "Tags": {
-      "via": "Groups",
-      "collection": "tags"
+      "collection": "tags",
+      "via": "Groups"
     },
     "Events": {
-      "via": "Groups",
-      "collection": "events"
+      "collection": "events",
+      "via": "Groups"
     },
     "Posts": {
-      "via": "Group",
-      "collection": "posts"
+      "collection": "posts",
+      "via": "Group"
+    },
+    "Members": {
+      "via": "GroupsMember",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "UsersFollowing": {
+      "via": "GroupsFollowing",
+      "plugin": "users-permissions",
+      "collection": "user"
     }
   }
 }

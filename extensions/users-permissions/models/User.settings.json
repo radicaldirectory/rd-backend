@@ -59,13 +59,23 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "Groups": {
-      "via": "Members",
-      "collection": "groups"
+    "GroupsMember": {
+      "collection": "groups",
+      "via": "Members"
     },
-    "Posts": {
-      "via": "User",
-      "collection": "posts"
+    "PostsAuthored": {
+      "collection": "posts",
+      "via": "User"
+    },
+    "EventsFollowing": {
+      "collection": "events",
+      "via": "UsersFollowing",
+      "dominant": true
+    },
+    "GroupsFollowing": {
+      "collection": "groups",
+      "via": "UsersFollowing",
+      "dominant": true
     }
   }
 }

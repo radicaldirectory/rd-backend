@@ -14,8 +14,8 @@
       "type": "string"
     },
     "Groups": {
-      "collection": "groups",
       "via": "Tags",
+      "collection": "groups",
       "dominant": true
     }
   }
