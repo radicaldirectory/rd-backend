@@ -1,8 +1,5 @@
-const parse = require("pg-connection-string").parse;
-
 module.exports = ({ env }) => {
   if (env("NODE_ENV") === "production") {
-    const config = parse(env(DATABASE_URL));
     return {
       defaultConnection: "default",
       connections: {
@@ -10,14 +7,14 @@ module.exports = ({ env }) => {
           connector: "bookshelf",
           settings: {
             client: "postgres",
-            host: config.host,
-            port: config.port,
-            database: config.database,
-            username: config.username,
-            password: config.password,
+            host: env("DATABASE_HOST", "localhost"),
+            port: env.int("DATABASE_PORT", 5432),
+            database: env("DATABASE_NAME", "strapi"),
+            username: env("DATABASE_USERNAME", "strapi"),
+            password: env("DATABASE_PASSWORD", "strapi"),
           },
           options: {
-            ssl: false,
+            ssl: true,
           },
         },
       },
