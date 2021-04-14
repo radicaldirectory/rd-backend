@@ -1,3 +1,3 @@
-# Strapi application
+# Radical Directory Strapi CMS
 
-A quick description of your strapi application
+Strapi is used to interface with the database content from an admin perspective, and generate the API for the frontend to consume.
