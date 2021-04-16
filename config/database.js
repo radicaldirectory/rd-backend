@@ -1,4 +1,5 @@
 module.exports = ({ env }) => {
+  //Use Postgres with env variables when running in production
   if (env("NODE_ENV") === "production") {
     return {
       defaultConnection: "default",
@@ -23,6 +24,7 @@ module.exports = ({ env }) => {
       },
     };
   }
+  // Use SQLite when running locally/in development environment
   return {
     defaultConnection: "default",
     connections: {
