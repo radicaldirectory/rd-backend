@@ -11,3 +11,5 @@ Strapi is used to interface with the database content from an admin perspective,
 - Install dependencies with `yarn install`
 
 - Create a `.env` file from the provided template with `cp .env.example .env`
+
+- Build the admin panel and start the server with `yarn run develop`
