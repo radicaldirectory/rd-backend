@@ -34,23 +34,28 @@
       "via": "Groups"
     },
     "Events": {
-      "collection": "events",
-      "via": "Groups"
+      "via": "Groups",
+      "collection": "events"
     },
     "Posts": {
       "collection": "posts",
       "via": "Group"
     },
     "Members": {
-      "via": "GroupsMember",
       "plugin": "users-permissions",
       "collection": "user",
+      "via": "GroupsMember",
       "dominant": true
     },
     "UsersFollowing": {
-      "via": "GroupsFollowing",
       "plugin": "users-permissions",
-      "collection": "user"
+      "collection": "user",
+      "via": "GroupsFollowing"
+    },
+    "Image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.accessible-image"
     }
   }
 }

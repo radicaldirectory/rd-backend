@@ -14,8 +14,8 @@
       "type": "text"
     },
     "Event": {
-      "model": "events",
-      "via": "Posts"
+      "via": "Posts",
+      "model": "events"
     },
     "Group": {
       "via": "Posts",

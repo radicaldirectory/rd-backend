@@ -60,21 +60,21 @@
       "configurable": false
     },
     "GroupsMember": {
-      "collection": "groups",
-      "via": "Members"
+      "via": "Members",
+      "collection": "groups"
     },
     "PostsAuthored": {
       "collection": "posts",
       "via": "User"
     },
     "EventsFollowing": {
-      "collection": "events",
       "via": "UsersFollowing",
+      "collection": "events",
       "dominant": true
     },
     "GroupsFollowing": {
-      "collection": "groups",
       "via": "UsersFollowing",
+      "collection": "groups",
       "dominant": true
     }
   }
